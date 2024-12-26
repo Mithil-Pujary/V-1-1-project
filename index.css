@@ -1,4 +1,24 @@
-p{
-    background-color: grey;
-    color: orange;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1100px;
+    margin: 0px;
+}
+body{
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_page{
+    width:min(900px,95%);
+    height: 500px;
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
