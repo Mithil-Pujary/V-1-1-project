@@ -1,6 +1,6 @@
 *{
     margin: 0px;
-    padding: 20px;
+    padding: 0px;
     box-sizing: border-box;
 }
 body{
@@ -9,6 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 35px 0px;
 }
 .login_page{
     width:min(900px,95%);
@@ -17,12 +18,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .inputgroup{
     position: relative;
-    width: 90%;
+    width: 95%;
     height: 50px;
-    background-color: blanchedalmond;
+    padding-left: 0px;
 }
 .inputgroup input{
     position: absolute;
@@ -44,3 +46,17 @@ body{
 .inputgroup label{
     position: absolute;
 }
+.topmargin{
+    margin-top: 50px;
+}
+.callforcation{
+    width: 100%;
+    height: 45px;
+    background-color: rgb(74, 120, 105);
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+.btllogin{
+    border: 1px solid blue;
+} 
