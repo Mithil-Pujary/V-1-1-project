@@ -105,3 +105,18 @@ body{
     box-shadow: 0 0 100px rgb(242,88,201);
     transform: translateY(-5px);
 }
+.error{
+    background-color: brown;
+    color: white;
+    width: 85%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.applyerror{
+    visibility: visible;
+    opacity: 1;
+}

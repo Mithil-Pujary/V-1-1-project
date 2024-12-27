@@ -11,7 +11,7 @@ $(function(e){
         }
         else{
             $("#btllogin").removeClass("activecolor");
-            $("#btllogin").addClass("inactivecolor");
+            $("#btllogin").addClass("inactivecolor"); 
         }
     });
 });
