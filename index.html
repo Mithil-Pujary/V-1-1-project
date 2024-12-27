@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="login.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -9,17 +9,18 @@
 <body>
     <div class="login_page">
         <div class="inputgroup">
-            <input type="text" name="username" id="lblusername" required>
-            <label for="username">USER NAME</label>
+            <input type="text" name="username" id="username" required>
+            <label for="username" id="lblusername">USER NAME</label>
         </div>
         <div class="inputgroup topmarginlarge">
-            <input type="password" name="password" id="lblpassword" required>
-            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="password" required>
+            <label for="password" id="lblpassword">PASSWORD</label>
         </div>
         <div class="callforcation topmarginlarge">
-            <button class="btllogin">LOGIN</button>
+            <button class="btllogin inactivecolor" id="btllogin">LOGIN</button>
         </div>
     </div>
-    <script></script>
+    <script src="jquery.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

@@ -21,6 +21,7 @@ body{
     flex-direction: column;
     background-color: transparent;
     border-radius: 10px;
+    transition: all 2s;
 }
 .login_page:hover{
     box-shadow: 0 0 100px 0px rgb(121, 97, 239),0 0 400px 10px rgb(121, 97, 239);
@@ -90,10 +91,15 @@ body{
     height: 45px;
     padding: 5px;
     border-radius: 5px;
-    background-color: rgb(50, 168, 247);
     color: white;
     transition: all 200ms;
 } 
+.inactivecolor{
+    background-color: rgb(190,22,22);
+}
+.activecolor{
+    background-color: rgb(50, 168, 247);
+}
 .btllogin:hover{
     box-shadow: 0 0 100px rgb(242,88,201);
     transform: translateY(-5px);
