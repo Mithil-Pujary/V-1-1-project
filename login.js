@@ -2,8 +2,8 @@
 $(function(e){
     //capture the keyup event
     $(document).on("keyup","input",function(e){
-        let un=$("username").val();
-        let pw=$("password").val();
+        let un=$("#username").val();
+        let pw=$("#password").val();
         if(un.trim()!=="" && pw.trim()!=="")
         {
             $("#btllogin").removeClass("inactivecolor");
