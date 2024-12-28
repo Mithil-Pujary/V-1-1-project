@@ -24,7 +24,7 @@ function trylogin()
             },
             
             error: function() {
-                console.error("Error:", status, error); // Log the error for debugging
+                console.error("Error:",status, error); // Log the error for debugging
                 alert("OOPS EVERYTHING WENT WRONG");
             }
         });
