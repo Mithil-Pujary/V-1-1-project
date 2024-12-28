@@ -1,7 +1,7 @@
 <?php
 $path=$_SERVER['DOCUMENT_ROOT'];
 require_once $path."/attendanceapp/database/database.php";
-require_once $path."/attendanceapp/database/faculty_details.php";
+require_once $path."/attendanceapp/database/facultydetails.php";
 $action=$_REQUEST["action"];
 
 if(!empty($action))
@@ -14,7 +14,7 @@ if(!empty($action))
 
         $dbobj=new Database();
 
-        $fdo= new faculty_Details();
+        $fdo=new faculty_details();																			
 
         $rv=$fdo->verifyuser($dbobj,$un,$pw);
 

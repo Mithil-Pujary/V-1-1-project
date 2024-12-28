@@ -4,34 +4,31 @@ function trylogin()
     let pw=$("#password").val();
     if(un.trim()!=="" && pw.trim()!="")
     {
-        $.ajax(
-            {
-                url:"ajaxhandler/loginAjax.php",
-                type:"POST",
-                dataType:"json",
-                data:{username:un,password:pw,action:"verifyuser"},
-                beforesend:function(){
-                    //alert("About");
-                },
-                //rv is known as the return value 
-                success:function(rv)
-                {
-                    //if the ajax call is successfull
-                    //result will be in rv
-                    //alert(JSON.stringify(rv));
-                    if(rv['status']=="ALL OK")
-                    {
-                        document.location.replace("attendance.php");
-                    }
-                    else{
-                        alert(rv['status']);
-                    }
-                },
-
-                error:function(){
-                    alert("OOPS EVERYTHING WENT WRONG");
-                },
-            });
+        $.ajax({
+            url: "ajaxhandler/loginAjax.php",
+            type: "POST",
+            dataType: "json",
+            data: { username :un, password :pw, action: "verifyuser" },
+            
+            beforeSend: function() {
+                alert("About to send request...");
+            },
+            
+            success: function(rv) {
+                // rv is the return value
+                if (rv['status'] == "ALL OK") {
+                    document.location.replace("attendance.php");
+                } else {
+                    alert(rv['status']);
+                }
+            },
+            
+            error: function() {
+                console.error("Error:", status, error); // Log the error for debugging
+                alert("OOPS EVERYTHING WENT WRONG");
+            }
+        });
+        
     }
 }
 // do everything  only when the doument is loded
@@ -49,5 +46,8 @@ $(function(e){
             $("#btllogin").removeClass("activecolor");
             $("#btllogin").addClass("inactivecolor");
         }
+    });
+    $(document).on("click","#btllogin",function(e){
+        trylogin();
     });
 });
