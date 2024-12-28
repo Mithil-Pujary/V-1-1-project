@@ -14,7 +14,7 @@ if(!empty($action))
 
         $dbobj=new Database();
 
-        $fdo=new faculty_details();																			
+        $fdo=new faculty_Details();																		
 
         $rv=$fdo->verifyuser($dbobj,$un,$pw);
 
