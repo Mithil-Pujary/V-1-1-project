@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(isset($_SESSION["current_user"]))
+{
+
+} 
+else{
+    header("location:"."/attendanceapp/login.php");
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,5 +19,9 @@
 </head>
 <body>
     <p>Hello</p>
+    <button id="btnlogout">LOGOUT</button>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/logout.js"></script>
 </body>
 </html>
