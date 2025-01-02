@@ -11,15 +11,22 @@ function trylogin()
             data: { username :un, password :pw, action: "verifyuser" },
             
             beforeSend: function() {
-                alert("About to send request...");
+                //alert("About to send request...");
+                $("#diverror").removeClass("applyerrordiv");
+                $("#lockscreen").addClass("applylockscreen");
+                
+                //$("#errormessage").text("");
             },
             
             success: function(rv) {
                 // rv is the return value
+                $("#lockscreen").removeClass("applylockscreen");
                 if (rv['status'] == "ALL OK") {
                     document.location.replace("attendance.php");
                 } else {
-                    alert(rv['status']);
+                    //alert(rv['status']);
+                    $("#diverror").addClass("applyerrordiv");
+                    $("#errormessage").text(rv['status']);
                 }
             },
             
@@ -35,6 +42,8 @@ function trylogin()
 $(function(e){
     //capture the keyup event
     $(document).on("keyup","input",function(e){
+        $("#diverror").removeClass("applyerrordiv");
+        //$("#errormessage").text("");
         let un=$("#username").val();
         let pw=$("#password").val();
         if(un.trim()!=="" && pw.trim()!=="")

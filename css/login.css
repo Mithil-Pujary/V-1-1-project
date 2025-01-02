@@ -105,18 +105,34 @@ body{
     box-shadow: 0 0 100px rgb(242,88,201);
     transform: translateY(-5px);
 }
-.error{
-    background-color: brown;
+
+.diverror{
+    background-color: transparent;
     color: white;
+    height:45px;
     width: 85%;
-    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     visibility: hidden;
     opacity: 0;
+    transform: all 1s;
+    letter-spacing: 1px;
 }
-.applyerror{
+
+.applyerrordiv{
     visibility: visible;
     opacity: 1;
+    animation: falldown 8s linear;
+}
+@keyframes falldown{
+    0%{opacity: 0;transform: translateY(-100px);}
+    49%{opacity: 1;transform: translateY(-0px);letter-spacing: 1px;}
+    50%{opacity: 1;transform: translateY(-0px);letter-spacing: 3px;}
+    55%{opacity: 1;transform: translateY(-0px);letter-spacing: 1px;}
+    60%{opacity: 1;transform: translateY(-50px);}
+    80%{opacity: 1;transform: translateY(-0px);}
+    85%{opacity: 1;transform: translateY(-10px);}
+    100%{opacity: 1;transform: translateY(0px);}
+
 }

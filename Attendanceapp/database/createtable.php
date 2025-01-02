@@ -247,7 +247,7 @@
     {
         for($j= 0;$j< 3;$j++)
         {
-            //FOR SESSION 1
+            //FOR SESSION 1 COURSE_REGISTRATION
             $cid=rand(1,5);
             try{
                 $s->execute([":sid"=>$i,":cid"=>$cid,":ses_id"=>1]);
@@ -255,10 +255,41 @@
             catch(PDOException $e){
             }
 
-            //FOR SESSION 2
+            //FOR SESSION 2 COURSE_REGISTRATION
             $cid=rand(1,5);
             try{
                 $s->execute([":sid"=>$i,":cid"=>$cid,":ses_id"=>2]);
+            }
+            catch(PDOException $e){
+            }
+        }
+    }
+
+
+    //VALUES FOR COURSE_ALLOTMENT TABLE BY RANDOM
+    cleartable($dbobj,"Course_allotment");
+    $c= "insert into Course_allotment
+    (faculty_id,course_id,session_id)
+    values
+    (:fid,:cid,:ses_id)";
+
+    $s=$dbobj->conn->prepare($c);
+    for($i= 1;$i<10;$i++)
+    {
+        for($j= 0;$j< 2;$j++)
+        {
+            //FOR SESSION 1 COURSE_ALLOTMENT
+            $cid=rand(1,5);
+            try{
+                $s->execute([":fid"=>$i,":cid"=>$cid,":ses_id"=>1]);
+            }
+            catch(PDOException $e){
+            }
+
+            //FOR SESSION 2 COURSE_ALLOTMENT
+            $cid=rand(1,5);
+            try{
+                $s->execute([":fid"=>$i,":cid"=>$cid,":ses_id"=>2]);
             }
             catch(PDOException $e){
             }

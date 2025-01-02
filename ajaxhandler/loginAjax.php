@@ -21,12 +21,15 @@ if(!empty($action))
         if($rv['status']=="ALL OK")
         {
             session_start();
-            $_SESSION['current_user']=$rv['fac_id'];
+            $_SESSION['current_user']=$rv['id'];
         }
-        else
-        {
+        for($i= 0;$i<100000;$i++){
+            for($j= 0;$j< 1000;$j++){
+
+            }
+        }
             echo json_encode($rv);
-        }
+        
     }
 }
 ?>

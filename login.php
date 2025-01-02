@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/login.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/loader.css">
     <title>Document</title>
 </head>
 <body>
@@ -19,9 +20,15 @@
         <div class="callforcation topmarginlarge">
             <button class="btllogin inactivecolor" id="btllogin">LOGIN</button>
         </div>
-        <div class="error topmarginlarge" id="error">
-            <label>ERROR GOES HERE</label>
+        <div class="diverror topmarginlarge" id="diverror">
+            <label class="errormessage" id="errormessage">Error</label>
         </div>
+    </div>
+    <div class="lockscreen" id="lockscreen">
+        <div class="spinner" id="spinner">
+
+        </div>
+        <label for="lbwait topmargin" id="lbwait">PLEASE WAIT</label>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/login.js"></script>
