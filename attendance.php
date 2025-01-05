@@ -58,7 +58,7 @@ else{
             <div class="studentdetails">
                 <div class="slno-area">001</div>
                 <div class="rollno-area">202302100410010</div>
-                <div class="name-area">Pujari mithil udaybhai</div>
+                <div class="name-area">student 1</div>
                 <div class="checkbox-area">
                     <input type="checkbox">
                 </div>
@@ -66,7 +66,7 @@ else{
             <div class="studentdetails">
                 <div class="slno-area">001</div>
                 <div class="rollno-area">202302100410010</div>
-                <div class="name-area">Pujari mithil udaybhai</div>
+                <div class="name-area">student 1</div>
                 <div class="checkbox-area">
                     <input type="checkbox">
                 </div>
@@ -74,7 +74,7 @@ else{
             <div class="studentdetails">
                 <div class="slno-area">001</div>
                 <div class="rollno-area">202302100410010</div>
-                <div class="name-area">Pujari mithil udaybhai</div>
+                <div class="name-area">student 1</div>
                 <div class="checkbox-area">
                     <input type="checkbox">
                 </div>
@@ -82,7 +82,7 @@ else{
             <div class="studentdetails">
                 <div class="slno-area">001</div>
                 <div class="rollno-area">202302100410010</div>
-                <div class="name-area">Pujari mithil udaybhai</div>
+                <div class="name-area">student 1</div>
                 <div class="checkbox-area">
                     <input type="checkbox">
                 </div>
@@ -90,7 +90,7 @@ else{
             <div class="studentdetails">
                 <div class="slno-area">001</div>
                 <div class="rollno-area">202302100410010</div>
-                <div class="name-area">Pujari mithil udaybhai</div>
+                <div class="name-area">student 1</div>
                 <div class="checkbox-area">
                     <input type="checkbox">
                 </div>
@@ -98,7 +98,7 @@ else{
             <div class="studentdetails">
                 <div class="slno-area">001</div>
                 <div class="rollno-area">202302100410010</div>
-                <div class="name-area">Pujari mithil udaybhai</div>
+                <div class="name-area">student 1</div>
                 <div class="checkbox-area">
                     <input type="checkbox">
                 </div>
