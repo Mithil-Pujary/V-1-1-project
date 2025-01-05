@@ -30,19 +30,19 @@ else{
         <div class="session-area">
             <div class="label-area"><label>SESSION</label></div>
             <div class="dropdown-area">
-                <select class="ddlclass">
-                    <option value="">SELECT ONE</option>
+                <select class="ddlclass" id="ddlclass">
+                    <!--<option value="">SELECT ONE</option>
                     <option value="">2023 AUTUMN</option>
-                    <option value="">2023 SPRING</option>
+                    <option value="">2023 SPRING</option>-->
                 </select>
             </div>
         </div>
         <div class="classlist-area">
+            <!--<div class="classcard">CS101</div>
             <div class="classcard">CS101</div>
             <div class="classcard">CS101</div>
             <div class="classcard">CS101</div>
-            <div class="classcard">CS101</div>
-            <div class="classcard">CS101</div>
+            <div class="classcard">CS101</div>-->
         </div>
         <div class="classdetails-area">
             <div class="classdetails">
@@ -106,6 +106,6 @@ else{
         </div>
     </div>
     <script src="js/jquery.js"></script>
-    <script src="js/logout.js"></script>
+    <script src="js/attendance.js"></script>
 </body>
 </html>
