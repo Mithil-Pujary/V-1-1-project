@@ -32,19 +32,19 @@ function loadSessions(){
         url: "ajaxhandler/attendanceAjax.php",
         type: "POST",
         dataType: "json",
-        data: {action:"getSession"},
+        data: {action:"getSessions"},
         
         beforeSend: function(e) {
-            alert("mibombocalt");
+            alert("Loading");
         },
         
         success: function(rv) {
-            alert(JSON.stringify(rv));
+            //alert(JSON.stringify(rv));
             let x=getsessionHTML(rv);
             $("#ddlclass").html(x);
         },
         error: function(e) {
-            alert("OPPS ERROR DETECTED!");
+            alert("OOPS!!!!");
         }
     });
 }
