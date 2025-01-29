@@ -43,6 +43,7 @@ else{
             <div class="classcard">CS101</div>
             <div class="classcard">CS101</div>
             <div class="classcard">CS101</div>-->
+            <!--bro you :sob:-->
         </div>
         <div class="classdetails-area">
             <div class="classdetails">
