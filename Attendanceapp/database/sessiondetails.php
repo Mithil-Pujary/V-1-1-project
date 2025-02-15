@@ -1,12 +1,12 @@
 <?php
 $path=$_SERVER['DOCUMENT_ROOT'];
-require_once $path."/attendancapp/database/database.php";
-class Sessiondetails
+require_once $path."/attendanceapp/database/database.php";
+class SessionDetails
 {
-    public function getSessions($dbobj)
+    public function getSession($dbobj)
     {
         $rv=[];
-        $c="select * from Session_Details";
+        $c="select * from session_details";
         $s=$dbobj->conn->prepare($c);  
         try{
             $s->execute();

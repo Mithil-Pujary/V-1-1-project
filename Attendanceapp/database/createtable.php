@@ -51,7 +51,7 @@
 
 
     //TABLE FOR SESSION
-    $x="create table Session_Details
+    $x="create table session_details
     (
         id int auto_increment primary key,
         year int unique,
@@ -199,7 +199,7 @@
 
 
     //VALUES FOR SESSION TABLE
-    $c="insert Session_Details
+    $c="insert session_details
     (id,year,term)
     values
     (1, 2025,'SUMMER'),
@@ -213,7 +213,7 @@
         {
             echo "<br>ERROR!! Already Exists". $e->getMessage();
         }
-
+        //bro you :sob:
 
     //VALUES FOR COURSE_DETAIL TABLE
     $c="insert Course_Details

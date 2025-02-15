@@ -101,6 +101,7 @@ body{
     padding: var(--padding);
     justify-content: center;
     border-bottom: 1px solid pink;
+    text-transform: uppercase;
 }
 .classcard{
     font-size: calc(var(--fontsize)*1);
@@ -111,6 +112,7 @@ body{
     color: white;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
 }
 .classcard:hover{
     background-color: rgb(226,43,174);
@@ -133,6 +135,7 @@ body{
     gap: var(--gap);
     padding: var(--padding);
     border-bottom: 1px solid pink;
+    text-transform: uppercase;
 }
 .classdetails{
     display: grid;
@@ -143,6 +146,7 @@ body{
     "code-area ondate-area ";
     gap: var(--gap);
     font-size: var(--fontsize);
+    text-transform: uppercase;
 }
 .title-area{
     grid-area: title-area;

@@ -1,13 +1,13 @@
 <?php
 session_start();
-if(isset($_SESSION["current_user"]))
-{
-
-} 
-else{
-    header("location:"."/attendanceapp/login.php");
-    die();
-}
+    if(isset($_SESSION["current_user"]))
+        {
+          $facid=$_SESSION["current_user"];
+        }
+    else{
+        header("location:"."/attendanceapp/login.php");
+        die();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -37,23 +37,23 @@ else{
                 </select>
             </div>
         </div>
-        <div class="classlist-area">
+        <div class="classlist-area" id="classlistarea">
             <!--<div class="classcard">CS101</div>
             <div class="classcard">CS101</div>
             <div class="classcard">CS101</div>
             <div class="classcard">CS101</div>
             <div class="classcard">CS101</div>-->
-            <!--bro you :sob:-->
         </div>
-        <div class="classdetails-area">
-            <div class="classdetails">
+        <div class="classdetails-area" id="classdetailsarea">
+            <!--<div class="classdetails">
                 <div class="code-area">CS101</div>
                 <div class="title-area">INTRODUCTION TO SCIENTIFIC COMPUTING</div>
                 <div class="ondate-area">
                     <input type="date">
                 </div>
-            </div>
+            </div>-->
         </div>
+        
         <div class="studentlist-area">
             <div class="studentlist"><label>STUDENT LIST</label></div>
             <div class="studentdetails">
@@ -106,6 +106,7 @@ else{
             </div>
         </div>
     </div>
+    <input type="hidden" id="hiddenFacId" value=<?php echo($facid) ?>>
     <script src="js/jquery.js"></script>
     <script src="js/attendance.js"></script>
 </body>

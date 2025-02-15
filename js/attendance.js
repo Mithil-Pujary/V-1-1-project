@@ -1,8 +1,8 @@
 /*
-    $.ajax({
-        url: "",
-        type: "",
-        dataType: "",
+$.ajax({
+        url: "ajaxhandler/attendanceAJAX.php",
+        type: "POST",
+        dataType: "json",
         data: { },
         
         beforeSend: function() {
@@ -15,6 +15,7 @@
         }
     });
 */
+
 function getsessionHTML(rv){
     let x=``;
     x =`<option value=-1>SELECT ONE</option>`;
@@ -29,13 +30,13 @@ function getsessionHTML(rv){
 
 function loadSessions(){
     $.ajax({
-        url: "ajaxhandler/attendanceAjax.php",
+        url: "ajaxhandler/attendanceAJAX.php",
         type: "POST",
         dataType: "json",
-        data: {action:"getSessions"},
+        data: {action:"getSession"},
         
         beforeSend: function(e) {
-            alert("Loading");
+            //alert("Loading");
         },
         
         success: function(rv) {
@@ -45,6 +46,67 @@ function loadSessions(){
         },
         error: function(e) {
             alert("OOPS!!!!");
+        }
+    });
+}
+
+function getCourseCardHTML(classlist){
+    let x=``;
+    x=``;
+    let i=0;
+    for(i=0;i<classlist.length;i++){
+        let cc=classlist[i];
+        x=x+`<div class="classcard" data-classobject='${JSON.stringify(cc)}'>${cc['code']}</div>`;
+    }
+    return x;
+}
+
+function fetchFacultyCourses(facid,sessionid){
+    $.ajax({
+        url: "ajaxhandler/attendanceAJAX.php",
+        type: "POST",
+        dataType: "json",
+        data: {facid:facid,sessionid:sessionid,action:"getFacultyCourses"},
+        
+        beforeSend: function() {
+            
+        },
+        
+        success: function(rv) {
+            //alert(JSON.stringify(rv));
+            let x=getCourseCardHTML(rv);
+            $("#classlistarea").html(x);
+        },
+        
+        error: function() {
+        }
+    });
+}
+function getClassdetailsAreaHTML(classobject){
+    let x=`<div class="classdetails">
+                <div class="code-area">${classobject['code']}</div>
+                <div class="title-area">${classobject['title']}</div>
+                <div class="ondate-area">
+                    <input type="date">
+                </div>
+            </div>`;
+    return x;
+}
+
+function fetchStudentList(sessionid,classid){
+    $.ajax({
+        url: "ajaxhandler/attendanceAJAX.php",
+        type: "POST",
+        dataType: "json",
+        data: {sessionid:sessionid,classid:classid,action:"fetchStudentList"},
+        
+        beforeSend: function() {
+        },
+        
+        success: function(rv) {
+        },
+        
+        error: function() {
         }
     });
 }
@@ -73,13 +135,27 @@ $(function(e)
             }
         });
     });
+
     loadSessions();
     $(document).on("change","#ddlclass",function(e)
     {
         let si=$("#ddlclass").val();
         if(si!=-1)
         {
-            alert(si);
+            //alert(si);
+            let sessionid=si;
+            let facid=$("#hiddenFacId").val();
+            fetchFacultyCourses(facid,sessionid);
+        }
+    });
+    $(document).on("click",".classcard",function(e){
+        let classobject=$(this).data('classobject');
+        //alert(JSON.stringify(s));
+        let x=getClassdetailsAreaHTML(classobject);
+        $("#classdetailsarea").html(x);
+        let sessionid=$("#ddlsession").val();
+        let classid=classobject['id'];
+        if(sessionid!=-1){
         }
     });
 });
