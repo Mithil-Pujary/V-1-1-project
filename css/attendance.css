@@ -216,12 +216,12 @@ body{
 }
 .checkbox-area input{
     font-size: var(--fontsize);
-    width: 1.5em;
+    width: 100%;
     height: 1.5em;
 }
 .checkbox-area{
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 .slno-area{
