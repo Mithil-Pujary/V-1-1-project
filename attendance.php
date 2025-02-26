@@ -54,56 +54,57 @@ session_start();
             </div>-->
         </div>
         
-        <div class="studentlist-area">
-            <div class="studentlist"><label>STUDENT LIST</label></div>
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">202302100410010</div>
-                <div class="name-area">student 1</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
+        <div class="studentlist-area" id="studentlistarea">
+            <!--<div class="studentlist"><label>STUDENT LIST</label></div>
+                <div class="studentdetails">
+                    <div class="slno-area">001</div>
+                    <div class="rollno-area">202302100410010</div>
+                    <div class="name-area">student 1</div>
+                    <div class="checkbox-area">
+                        <input type="checkbox">
+                    </div>
                 </div>
-            </div>
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">202302100410010</div>
-                <div class="name-area">student 1</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
+                <div class="studentdetails">
+                    <div class="slno-area">001</div>
+                    <div class="rollno-area">202302100410010</div>
+                    <div class="name-area">student 1</div>
+                    <div class="checkbox-area">
+                        <input type="checkbox">
+                    </div>
+                </div>            
+                <div class="studentdetails">
+                    <div class="slno-area">001</div>
+                    <div class="rollno-area">202302100410010</div>
+                    <div class="name-area">student 1</div>
+                    <div class="checkbox-area">
+                        <input type="checkbox">
+                    </div>
                 </div>
-            </div>            
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">202302100410010</div>
-                <div class="name-area">student 1</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
+                <div class="studentdetails">
+                    <div class="slno-area">001</div>
+                    <div class="rollno-area">202302100410010</div>
+                    <div class="name-area">student 1</div>
+                    <div class="checkbox-area">
+                        <input type="checkbox">
+                    </div>
                 </div>
-            </div>
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">202302100410010</div>
-                <div class="name-area">student 1</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
+                <div class="studentdetails">
+                    <div class="slno-area">001</div>
+                    <div class="rollno-area">202302100410010</div>
+                    <div class="name-area">student 1</div>
+                    <div class="checkbox-area">
+                        <input type="checkbox">
+                    </div>
                 </div>
-            </div>
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">202302100410010</div>
-                <div class="name-area">student 1</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
+                <div class="studentdetails">
+                    <div class="slno-area">001</div>
+                    <div class="rollno-area">202302100410010</div>
+                    <div class="name-area">student 1</div>
+                    <div class="checkbox-area">
+                        <input type="checkbox">
+                    </div>
                 </div>
-            </div>
-            <div class="studentdetails">
-                <div class="slno-area">001</div>
-                <div class="rollno-area">202302100410010</div>
-                <div class="name-area">student 1</div>
-                <div class="checkbox-area">
-                    <input type="checkbox">
-                </div>
-            </div>
+            !-->
         </div>
     </div>
     <input type="hidden" id="hiddenFacId" value=<?php echo($facid) ?>>

@@ -83,13 +83,36 @@ function fetchFacultyCourses(facid,sessionid){
     });
 }
 function getClassdetailsAreaHTML(classobject){
+    let dbobj=new Date();
+    let ondate=`2023-01-01`;
     let x=`<div class="classdetails">
                 <div class="code-area">${classobject['code']}</div>
                 <div class="title-area">${classobject['title']}</div>
                 <div class="ondate-area">
-                    <input type="date">
+                    <input type="date" value='$(ondate)'>
                 </div>
             </div>`;
+    return x;
+}
+
+function getStudentListHTML(studentList) {
+    let x = `
+        <div class="studentlist">
+            <label>STUDENT LIST</label>
+        </div>`;
+
+    for (let i = 0; i < studentList.length; i++) {
+        let cs = studentList[i];
+        x =x+ `<div class="studentdetails">
+            <div class="slno-area">${i + 1}</div>
+            <div class="rollno-area">${cs['std_enrollment']}</div>
+            <div class="name-area">${cs['std_name']}</div>
+            <div class="checkbox-area">
+                <input type="checkbox">
+            </div>
+        </div>`;
+    }
+
     return x;
 }
 
@@ -98,12 +121,15 @@ function fetchStudentList(sessionid,classid){
         url: "ajaxhandler/attendanceAJAX.php",
         type: "POST",
         dataType: "json",
-        data: {sessionid:sessionid,classid:classid,action:"fetchStudentList"},
+        data: {sessionid:sessionid,classid:classid,action:"getStudentList"},
         
         beforeSend: function() {
         },
         
         success: function(rv) {
+            //alert(JSON.stringify(rv));
+            let x=getStudentListHTML(rv);
+            $("#studentlistarea").html(x);
         },
         
         error: function() {
@@ -153,9 +179,10 @@ $(function(e)
         //alert(JSON.stringify(s));
         let x=getClassdetailsAreaHTML(classobject);
         $("#classdetailsarea").html(x);
-        let sessionid=$("#ddlsession").val();
+        let sessionid=$("#ddlclass").val();
         let classid=classobject['id'];
         if(sessionid!=-1){
+            fetchStudentList(sessionid,classid);
         }
     });
 });

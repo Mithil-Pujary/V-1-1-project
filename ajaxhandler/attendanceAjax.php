@@ -3,6 +3,8 @@ $path=$_SERVER['DOCUMENT_ROOT'];
 require_once $path."/attendanceapp/database/database.php";
 require_once $path."/attendanceapp/database/sessiondetails.php";
 require_once $path."/attendanceapp/database/facultydetails.php";
+require_once $path."/attendanceapp/database/courseRegisterationDetails.php";
+//courseRegisterationDetails.php
 if(isset($_REQUEST['action']))
 {
     $action=$_REQUEST['action'];
@@ -27,14 +29,13 @@ if(isset($_REQUEST['action']))
     }
     //data: {sessionid:sessionid,classid:classid,
     //action:"fetchStudentList"},
-    if($action=="fetchStudentList")
+    if($action=="getStudentList")
     {
         $classid=$_POST['classid'];
         $sessionid=$_POST['sessionid'];
         $dbobj=new Database();
-        $fo=new faculty_Details();
-        $rv=$fo->getCoursesInASession($dbobj, $sessionid,$facid);
-        //$rv=[];
+        $crgo=new CourseRegisterationDetails();
+        $rv=$crgo->getResgisteredCourses($dbobj,$sessionid,$classid);
         echo json_encode($rv);
     }
 } 

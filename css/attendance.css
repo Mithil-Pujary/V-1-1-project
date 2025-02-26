@@ -216,7 +216,7 @@ body{
 }
 .checkbox-area input{
     font-size: var(--fontsize);
-    width: 100%;
+    width: 1.5em;
     height: 1.5em;
 }
 .checkbox-area{
