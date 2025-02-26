@@ -84,12 +84,23 @@ function fetchFacultyCourses(facid,sessionid){
 }
 function getClassdetailsAreaHTML(classobject){
     let dbobj=new Date();
-    let ondate=`2023-01-01`;
+    let ondate =`2023-01-01`;
+    let year=dbobj.getFullYear();
+    let month=dbobj.getMonth()+1;
+    if(month<10){
+     month="0"+month;   
+    }
+    let day=dbobj.getDate();
+    if(day<10){
+        day="0"+day;   
+       }
+    ondate=year+"-"+month+"-"+day;
+    //alert(ondate);
     let x=`<div class="classdetails">
                 <div class="code-area">${classobject['code']}</div>
                 <div class="title-area">${classobject['title']}</div>
                 <div class="ondate-area">
-                    <input type="date" value='$(ondate)'>
+                    <input type="date" value='${ondate}'>
                 </div>
             </div>`;
     return x;
